@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components Fundamentals | Vue.js</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>The Good, the Bad and the Ugly</h1>
+        <h2>You know in this world there's two kinds of people, my friend. Those with loaded guns and those who dig. You dig.</h2>
+        <p>The Good, the Bad and the Ugly (Italian: Il buono, il brutto, il cattivo, lit. "The good, the ugly, the bad") is a 1966 Italian epic Spaghetti Western film directed by Sergio Leone and starring Clint Eastwood as "the Good", Lee Van Cleef as "the Bad", and Eli Wallach as "the Ugly".</p>
+        <div class="plans">
+            <plan v-for="plan in plans" :name="plan"></plan>
+        </div>
+    </div>
+
+    <script type="text/x-template" id="plan-template">
+        <div class="plan">
+            <div class="description">
+                <div class="title">
+                    {{ name }}
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
